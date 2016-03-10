@@ -1,0 +1,121 @@
+// bower:scss
+// endbower
+
+body {
+  font-family: 'Satisfy', 'Helvetica Neue', Arial, sans-serif;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+a {
+  text-decoration: none !important;
+  color: #fff;
+}
+
+a:hover {
+  color: #ccc;
+}
+
+.main-container {
+  position: relative;
+  background: black;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.logo-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  
+  .logo-wrapper {
+    height: 200px; 
+    position: relative;
+  
+    .tailor-logo {
+      position: relative;
+      height: 200px; 
+      z-index: 1000;
+      transition: 1s ease-in opacity;
+    }
+  }
+}
+
+
+.loader-container {
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  z-index: 1;
+  .loader {
+    position: absolute;
+    top: -16%;
+    left: -19%;
+    margin: auto;
+  }
+}
+
+.link-container {
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  height: 25px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  .link-main {
+    margin: 10px;
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, -10%, 0);
+  }
+}
+
+.fadeOutUp {
+  animation-name: fadeOutUp;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, -10%, 0);
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
